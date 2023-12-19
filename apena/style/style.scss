@@ -1,8 +1,11 @@
+@import "vars";
+//
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap");
+//
 body {
 	height: 100vh;
-	background: rgb(66, 37, 37);
-	background: radial-gradient(circle, rgba(66, 37, 37, 1) 28%, rgba(0, 0, 0, 1) 50%, rgba(131, 1, 1, 1) 100%);
+	background: $bg-color;
+	background: $bg-gradient;
 }
 
 .popUP_container {
@@ -22,8 +25,8 @@ body {
 		display: flex;
 		flex-direction: row;
 		position: relative;
-		border-radius: 40px;
-		background: rgba(255, 255, 255, 0.75);
+		border-radius: $radius;
+		background: $cards-color-opacity;
 		box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 		backdrop-filter: blur(2px);
 		.left_side {
@@ -35,7 +38,7 @@ body {
 				overflow: hidden;
 				width: 200px;
 				height: 310px;
-				border-radius: 40px;
+				border-radius: $radius;
 				margin-bottom: 20px;
 				img {
 					object-fit: cover;
@@ -47,8 +50,9 @@ body {
 			.class_selector_btn {
 				align-items: center;
 				background-color: #fff;
-				border-radius: 12px;
-				box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
+				border-radius: $radius;
+				box-shadow: transparent 0 0 0 3px,
+					rgba(18, 18, 18, 0.1) 0 6px 20px;
 				box-sizing: border-box;
 				color: #121212;
 				cursor: pointer;
@@ -165,8 +169,8 @@ main {
 	align-items: center;
 	padding-left: 20px;
 	padding-right: 20px;
-	border-bottom-left-radius: 40px 40px;
-	border-bottom-right-radius: 40px 40px;
+	border-bottom-left-radius: $radius $radius;
+	border-bottom-right-radius: $radius $radius;
 
 	background: rgba(255, 255, 255, 0.75);
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -236,10 +240,10 @@ main {
 				align-items: center;
 				justify-content: center;
 				gap: 30px;
-				border-radius: 40px;
+				border-radius: $radius;
 				width: 400px;
 				height: 100%;
-				background-color: white;
+				background-color: $cards-color;
 				.player1_title {
 					font-family: Mulish;
 					font-size: 30px;
@@ -278,10 +282,10 @@ main {
 			}
 			.middle_side {
 				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-				border-radius: 40px;
+				border-radius: $radius;
 				width: 100%;
 				height: auto;
-				background-color: white;
+				background-color: $cards-color;
 				display: flex;
 				flex-direction: row;
 
@@ -304,7 +308,7 @@ main {
 			}
 			.right_side {
 				box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-				border-radius: 40px;
+				border-radius: $radius;
 				width: 400px;
 				height: 100%;
 				background-color: white;
@@ -313,10 +317,10 @@ main {
 				align-items: center;
 				justify-content: center;
 				gap: 30px;
-				border-radius: 40px;
+				border-radius: $radius;
 				width: 400px;
 				height: 100%;
-				background-color: white;
+				background-color: $cards-color;
 				.player2_title {
 					font-family: Mulish;
 					font-size: 30px;
