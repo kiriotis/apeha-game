@@ -2,9 +2,14 @@ import { warrior } from "./../players_class/warrior.js";
 import { mage } from "./../players_class/mage.js";
 import { popUP_render } from "./popUP.js";
 
-var player1_choiseIS;
-var player2_choiseIS;
+////////////////////////////////////////////////////////////////
 
-export function render_stats() {
-	popUP_render();
+popUP_render();
+
+/////////////////////////////////////////////////////////////////
+export function render_stats(player1_choiseIS, player2_choiseIS) {
+    for (var i = 0; i < arguments.length; i++) {
+
+
+	}
 }
