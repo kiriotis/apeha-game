@@ -8,6 +8,29 @@
 		<title>arena</title>
 	</head>
 	<body>
+		<div class="popUP_container">
+			<div class="popUP_main">
+				<div class="left_side">
+					<div class="img_popup_wrapper_pre"><img class="popUp_image" src="./assets/main_assets/warrior1.jpg" alt="altKek" /></div>
+					<button class="class_selector_btn" id="warrior">warrior</button>
+					<button class="class_selector_btn" id="mage">mage</button>
+					<button class="class_selector_btn" id="confirm">confirm</button>
+				</div>
+
+				<div class="right_side">
+					<div class="player_selector_name"></div>
+					<div class="player_title_pre"></div>
+					<div class="player_stats_main_pre">
+						<p class="player_hp_pre"></p>
+						<p class="player_mp_pre"></p>
+					</div>
+					<div class="player_stats_pre">
+						<p class="player_p_def_pre"></p>
+						<p class="player_m_def_pre"></p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<header>
 			<div class="container">
 				<div class="header_main">
@@ -35,23 +58,23 @@
 				<div class="container">
 					<div class="main_wrapper">
 						<div class="left_side">
-							<div class="player1_title">kiriotis</div>
+							<div class="player1_title"></div>
 							<div class="player1_img_wrapper"><img src="./assets/main_assets/warrior1.jpg" alt="altKek" /></div>
 							<div class="player1_stats">
-								<p class="player_hp">1hp</p>
-								<p class="player_mp">1mp</p>
+								<p class="player_hp"></p>
+								<p class="player_mp"></p>
 							</div>
 						</div>
 						<div class="middle_side">
-							<div class="main_left"><button>1</button><button>2</button><button>3</button></div>
-							<div class="main_right"><button>1</button><button>2</button><button>3</button></div>
+							<div class="main_left"><button>скил 1</button><button>скил 2</button><button class="turn_btn1">Next turn</button></div>
+							<div class="main_right"><button>скил 1</button><button>скил 2</button><button class="turn_btn2">Next turn</button></div>
 						</div>
 						<div class="right_side">
-							<div class="player2_title">alexkoh</div>
+							<div class="player2_title"></div>
 							<div class="player2_img_wrapper"><img src="./assets/main_assets/warrior2.jpg" alt="altKek" /></div>
 							<div class="player2_stats">
-								<p class="player2_hp">1hp</p>
-								<p class="player2_mp">1mp</p>
+								<p class="player2_hp"></p>
+								<p class="player2_mp"></p>
 							</div>
 						</div>
 					</div>
@@ -69,6 +92,6 @@
 				</div>
 			</div>
 		</footer>
-		<script src="./scrypt/battle.js"></script>
+		<script src="./scrypt/main.js" type="module"></script>
 	</body>
 </html>
