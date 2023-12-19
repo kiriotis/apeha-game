@@ -20,7 +20,7 @@ export function popUP_render(data_card) {
 	if (data_card == undefined) {
 		data_card = warrior;
 	}
-	player_pick_class = data_card.class;
+	player_pick_class = data_card;
 
 	let popUPimg = document.querySelector(".popUp_image");
 	// popUPimg.setAttribute("src", `${data_card.image}`);
@@ -46,9 +46,7 @@ function checked_player() {
 		player1_choiseIS = player_pick_class;
 	} else {
 		player2_choiseIS = player_pick_class;
-        popUp.classList.add("popUP_Disable");
-        render_stats(player1_choiseIS, player2_choiseIS);
+		popUp.classList.add("popUP_Disable");
+		render_stats(player1_choiseIS, player2_choiseIS);
 	}
-
-
 }
