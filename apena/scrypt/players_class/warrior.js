@@ -6,6 +6,13 @@ export const warrior = {
 	physical_def: 10,
 	magical_def: 5,
 	skills: {
-		first_attack: {},
+		"Normal Attack": {
+			type: "normal",
+			damage: 10,
+		},
+		powerful_attack: {
+			type: "normal",
+			damage: 20,
+		},
 	},
 };

@@ -6,6 +6,7 @@ export const mage = {
 	physical_def: 5,
 	magical_def: 10,
 	skills: {
-		first_attack: {},
+		fire_ball: { type: "magic", damage: 10 },
+		earth_ball: { type: "combine", damage: 10, mag_damge: 10, },
 	},
 };
