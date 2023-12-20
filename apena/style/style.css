@@ -18,7 +18,6 @@ body {
 }
 .popUP_container .popUP_main {
   padding: 16px;
-  width: 800px;
   height: 504px;
   display: flex;
   flex-direction: row;
@@ -33,52 +32,76 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-right: 20px;
 }
-.popUP_container .popUP_main .left_side .img_popup_wrapper_pre {
+.popUP_container .popUP_main .left_side .elector_btn_container {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+.popUP_container .popUP_main .left_side .cards__container {
+  display: flex;
+  gap: 10px;
+}
+.popUP_container .popUP_main .left_side .cards__container .img_popup_wrapper_pre {
+  transition: all 300ms ease;
+  position: relative;
   overflow: hidden;
   width: 200px;
   height: 310px;
   border-radius: 22px;
   margin-bottom: 20px;
 }
-.popUP_container .popUP_main .left_side .img_popup_wrapper_pre img {
+.popUP_container .popUP_main .left_side .cards__container .img_popup_wrapper_pre:hover {
+  scale: 105%;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.popUP_container .popUP_main .left_side .cards__container .img_popup_wrapper_pre img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
-  transition-duration: 500ms;
+}
+.popUP_container .popUP_main .left_side .cards__container .img_popup_wrapper_pre:hover .description > .other {
+  max-height: 500px;
+}
+.popUP_container .popUP_main .left_side .cards__container .img_popup_wrapper_pre .description {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 16px;
+  background: rgba(202, 203, 198, 0.5);
+  z-index: 20;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.popUP_container .popUP_main .left_side .cards__container .img_popup_wrapper_pre .description .player_title_pre {
+  font-size: 32px;
+}
+.popUP_container .popUP_main .left_side .cards__container .img_popup_wrapper_pre .description .other {
+  transition: all 300ms ease;
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.popUP_container .popUP_main .left_side .cards__container .img_popup_wrapper_pre .description .other .player_stats_main_pre {
+  display: flex;
+  gap: 10px;
 }
 .popUP_container .popUP_main .left_side .class_selector_btn {
+  padding: 20px 10px;
   align-items: center;
   background-color: #fff;
   border-radius: 22px;
   box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
   box-sizing: border-box;
   color: #121212;
+  font-size: 24;
   cursor: pointer;
-  display: inline-flex;
-  flex: 1 1 auto;
-  font-family: Inter, sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  margin: 0;
-  outline: none;
-  padding: 1rem 1.2rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow 0.2s;
-  white-space: nowrap;
-  border: 0;
-  -moz-user-select: none;
-       user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
 }
 .popUP_container .popUP_main .right_side {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 20px;
 }
