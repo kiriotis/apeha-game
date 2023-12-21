@@ -25,6 +25,7 @@ function player2_turn() {
 }
 
 export function core_battle() {
+
 	player1_curent_stats = { ...arguments[0] };
 	player2_curent_stats = { ...arguments[1] };
 	if (player1_checkedTurn && player2_checkedTurn) {
@@ -36,3 +37,8 @@ export function core_battle() {
 	}
 	console.log(player1_curent_stats, player2_curent_stats);
 }
+
+export function player1_stack() {
+	console.log(arguments[0]);
+}
+export function player2_stack() {}
