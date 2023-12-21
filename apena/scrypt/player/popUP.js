@@ -1,15 +1,21 @@
 import { allClasses } from "../players_class/allClasses.js";
 import { render_stats } from "./player.js";
 import { playerCard } from "./playerCard.js";
-import { chosen_card } from "./playerCard.js";
 
 let popUp = document.querySelector(".popUP_container");
-let player1_choiseIS;
-let player2_choiseIS;
+//
+let chosen_card = null;
+//
+let player1_choiceIS;
+let player2_choiceIS;
 
 //
 document.getElementById("confirm").addEventListener("click", checked_player);
-// let player_pick_class;
+//
+
+function setChoice(cardData) {
+	chosen_card = cardData;
+}
 
 ///////////////////////////////////////////////////////
 export function popUP_render(data_card) {
@@ -17,17 +23,7 @@ export function popUP_render(data_card) {
 	container.innerHTML = null;
 	//
 	for (const key in allClasses) {
-		// const btn = document.createElement("button");
-		// btn.className = "class_selector_btn";
-		// btn.innerHTML = allClasses[key].class;
-		// btn.id = allClasses[key].class;
-		// btn.addEventListener("click", () => {
-		// 	popUP_render(allClasses[key]);
-		// });
-		// //
-		// buttonsContainer.appendChild(btn);
-
-		container.appendChild(playerCard(allClasses[key]));
+		container.appendChild(playerCard(allClasses[key], setChoice));
 	}
 }
 
@@ -37,13 +33,12 @@ function checked_player() {
 	document.querySelectorAll(".img_popup_wrapper_pre").forEach((el) => {
 		el.classList.remove("active");
 	});
-	if (player1_choiseIS == undefined) {
-		player1_choiseIS = chosen_card;
-		console.log(player1_choiseIS);
+	if (player1_choiceIS == undefined) {
+		player1_choiceIS = chosen_card;
 	} else {
-		player2_choiseIS = chosen_card;
+		player2_choiceIS = chosen_card;
 		popUp.classList.add("popUP_Disable");
-		render_stats(player1_choiseIS, player2_choiseIS);
+		render_stats(player1_choiceIS, player2_choiceIS);
 	}
 }
 
