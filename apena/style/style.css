@@ -304,7 +304,7 @@ main {
   display: flex;
   flex-direction: row;
 }
-.main_container .container .main_wrapper .middle_side .main_left {
+.main_container .container .main_wrapper .middle_side .player_1_skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -312,7 +312,7 @@ main {
   gap: 10px;
   width: 50%;
 }
-.main_container .container .main_wrapper .middle_side .main_right {
+.main_container .container .main_wrapper .middle_side .player_2_skills {
   width: 50%;
   display: flex;
   flex-direction: column;
