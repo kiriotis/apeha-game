@@ -1,7 +1,7 @@
-import { appendAll } from "../main.js";
+import { appendAll } from "./../helpers/appendAll.js";
 export let chosen_card;
 
-export function playerCard(params) {
+export function playerCard(params, fn) {
 	const cardEl = document.createElement("div");
 	cardEl.className = "img_popup_wrapper_pre";
 	cardEl.addEventListener("click", () => {
@@ -9,7 +9,7 @@ export function playerCard(params) {
 			el.classList.remove("active");
 		});
 		cardEl.classList.toggle("active");
-		chosen_card = params;
+		fn(params);
 	});
 	//
 	const imgEl = document.createElement("img");
@@ -43,7 +43,8 @@ export function playerCard(params) {
 	//
 	const player_p_def_preEl = document.createElement("p");
 	player_p_def_preEl.className = "player_p_def_pre";
-	player_p_def_preEl.innerHTML = "Physical protection: " + params.physical_def;
+	player_p_def_preEl.innerHTML =
+		"Physical protection: " + params.physical_def;
 	//
 	const player_m_def_preEl = document.createElement("p");
 	player_m_def_preEl.className = "player_m_def_pre";
@@ -51,7 +52,19 @@ export function playerCard(params) {
 	//
 	appendAll(cardEl, [
 		imgEl,
-		appendAll(descriptionEl, [appendAll(player_title_preEl, []), appendAll(otherEl, [appendAll(player_stats_main_preEl, [player_hp_preEl, player_mp_preEl]), appendAll(player_stats_preEl, [player_p_def_preEl, player_m_def_preEl])])]),
+		appendAll(descriptionEl, [
+			appendAll(player_title_preEl, []),
+			appendAll(otherEl, [
+				appendAll(player_stats_main_preEl, [
+					player_hp_preEl,
+					player_mp_preEl,
+				]),
+				appendAll(player_stats_preEl, [
+					player_p_def_preEl,
+					player_m_def_preEl,
+				]),
+			]),
+		]),
 	]);
 	// console.log(cardEl);
 	return cardEl;
