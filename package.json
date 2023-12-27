@@ -1,0 +1,23 @@
+{
+  "name": "apeha-game",
+  "version": "1.0.0",
+  "description": "game development",
+  "main": "index.js",
+  "scripts": {
+    "lintFix": "sudo npx eslint --fix --ext .js,.jsx .",
+    "lint":"sudo npx eslint apena/scrypt"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "prettier": "3.1.1"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^19.0.4"
+  }
+}
