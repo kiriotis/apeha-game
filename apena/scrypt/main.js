@@ -1,3 +1,3 @@
-import { render_stats } from "./player/player.js";
+import renderStats from './player/popUP.js';
 //
-render_stats();
+renderStats();

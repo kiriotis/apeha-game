@@ -1,6 +1,6 @@
 const playerClasses = {
-	warrior: "Warrior",
-	wizard: "Wizard",
+  warrior: 'Warrior',
+  wizard: 'Wizard',
 };
 //
 Object.freeze(playerClasses);
