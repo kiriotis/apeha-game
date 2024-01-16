@@ -8,11 +8,13 @@ export const warrior = {
 	skills: {
 		"Normal Attack": {
 			type: "normal",
-			damage: 10,
+      damage: 12,
+      cost: 10,
 		},
 		powerful_attack: {
 			type: "normal",
-			damage: 20,
+      damage: 20,
+      cost: 12,
 		},
 	},
 };
