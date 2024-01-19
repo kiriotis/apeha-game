@@ -165,7 +165,7 @@ function win_condition() {
     popUPRender(otvet);
   }
   if (player2_curent_stats.health <= 0) {
-    let otvet = "игрок 2";
+    let otvet = "игрок 1";
     popUPRender(otvet);
   }
 }
