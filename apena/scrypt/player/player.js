@@ -5,6 +5,8 @@ import { popUP_render } from "./popUP.js";
 
 let left_part_skils = document.querySelector(".main_left");
 let right_part_skils = document.querySelector(".main_right");
+let main_player_image = document.querySelector(".player1_img_main");
+let main_player2_image = document.querySelector(".player2_img_main");
 
 ////////////////////////////////////////////////////////////////
 
@@ -12,8 +14,6 @@ popUP_render();
 
 /////////////////////////////////////////////////////////////////
 export function render_stats(player1_choiseIS, player2_choiseIS) {
-  console.log(player1_choiseIS);
-
   let player1_title = document.querySelector(".player1_title");
   player1_title.innerHTML = player1_choiseIS.class;
   let player_hp = document.querySelector(".player_hp");
@@ -32,6 +32,10 @@ export function render_stats(player1_choiseIS, player2_choiseIS) {
     left_part_skils.appendChild(skill_btn);
   }
 
+  main_player_image.src = player1_choiseIS.img;
+  // document
+  //   .querySelector("player1_img_main")
+  //   .setAttribute("src", `${player1_choiseIS.img}`);
   //////////////
   let player2_title = document.querySelector(".player2_title");
   player2_title.innerHTML = player2_choiseIS.class;
@@ -46,9 +50,10 @@ export function render_stats(player1_choiseIS, player2_choiseIS) {
     skill_btn.addEventListener("click", () => {
       player2_stack({ ...player2_choiseIS.skills[key], name: key });
     });
-    skill_btn.innerHTML = "Skill_btn_player2";
+    skill_btn.innerHTML = key;
     right_part_skils.appendChild(skill_btn);
   }
+  main_player2_image.src = player2_choiseIS.img;
   ////////////////////////
   core_battle(player1_choiseIS, player2_choiseIS);
 }

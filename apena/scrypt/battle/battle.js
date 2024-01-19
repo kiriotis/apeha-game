@@ -1,10 +1,4 @@
-// const kek = { name: "kek", age: 123 };
-
-// let copy = { ...kek };
-// copy.name = "lol";
-// console.log(copy);
-// console.log(kek);
-
+import {popUPRender } from "./popup.js"
 let player1_curent_stats;
 let player2_curent_stats;
 document.querySelector(".turn_btn1").addEventListener("click", player1_turn);
@@ -51,6 +45,7 @@ export function core_battle() {
   if (player1_checkedTurn && player2_checkedTurn) {
     core_calc();
     console.log("ход окончен");
+    win_condition();
     next_turn();
   } else {
     console.log("какой то черт не принял ход");
@@ -162,4 +157,15 @@ function next_turn() {
     player2_curent_stats.health + " Hp";
   document.querySelector(".player2_mp").innerHTML =
     player2_curent_stats.mana + " Mp";
+}
+
+function win_condition() {
+  if (player1_curent_stats.health <= 0) {
+    let otvet = "игрок 2";
+    popUPRender(otvet);
+  }
+  if (player2_curent_stats.health <= 0) {
+    let otvet = "игрок 2";
+    popUPRender(otvet);
+  }
 }
